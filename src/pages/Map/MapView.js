@@ -57,7 +57,7 @@ const MapView = (props) => {
     <Map
       className="map"
       center={center}
-      zoom={11.5}
+      zoom={11}
       minZoom={7}
       maxZoom={15}
       oncontextmenu={handleOnContextMenu}

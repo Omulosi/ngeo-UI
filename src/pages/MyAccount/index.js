@@ -54,7 +54,6 @@ const MyAccount = (props) => {
     axiosWithAuth()
     .get('/auth/me')
     .then(({data}) => {
-      debugger
       setUser(data.data.attributes);
     })
     .catch(err => {

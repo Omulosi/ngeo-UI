@@ -357,15 +357,6 @@ const getMenuItems = (props) => {
           }),
           leftIcon: <People />,
         },
-        {
-          value: '/agents',
-          visible: isAuthorised,
-          primaryText: intl.formatMessage({
-            id: 'projects',
-            defaultMessage: 'Dismissed',
-          }),
-          leftIcon: <Assignment />,
-        },
        
       ],
     },

@@ -40,9 +40,8 @@ const ProfileDetails = ({ className, user={}, pushMessageToSnackbar, ...rest }) 
     county,
     phone
   } = user;
-  
-  const classes = useStyles();
-  const [values, setValues] = useState({
+
+  const values = {
     firstName: first_name || '',
     lastName: last_name || '',
     email: email || '',
@@ -50,11 +49,14 @@ const ProfileDetails = ({ className, user={}, pushMessageToSnackbar, ...rest }) 
     county: county || '',
     country: 'KEN',
 
-  });
+  }
+  
+  const classes = useStyles();
+  const [userVals, setValues] = useState(values);
 
   const handleChange = (event) => {
     setValues({
-      ...values,
+      ...userVals,
       [event.target.name]: event.target.value
     });
   };

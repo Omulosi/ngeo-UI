@@ -12,6 +12,7 @@ import DataGridToolbar from '../../components/DataGridToolbar';
 import { DataGrid } from '@material-ui/data-grid';
 
 import { axiosWithAuth } from "../../utils/axios"
+import { PROJECTS_LIST_ENDPOINT } from "../../config/urls";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -31,7 +32,7 @@ const Projects = () => {
 
   useEffect(() => {
     axiosWithAuth()
-    .get('http://127.0.0.1:8000/api/v1/isiolo_projects')
+    .get(PROJECTS_LIST_ENDPOINT)
     .then(({ data }) => {
       data = data.data.results? data.data.results.features: []
       setProjects(data)

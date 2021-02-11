@@ -9,7 +9,9 @@ import {
 import { useDemoData } from '@material-ui/x-grid-data-generator';
 import ResultGrid from '../../components/ResultGrid';
 import DataGridToolbar from '../../components/DataGridToolbar';
-import { axiosWithAuth } from "../../utils/axios"
+import { axiosWithAuth } from "../../utils/axios";
+
+import { AGENTS_LIST_ENDPOINT } from "../../config/urls";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -35,7 +37,7 @@ const Agents = () => {
 
   useEffect(() => {
     axiosWithAuth()
-    .get('http://127.0.0.1:8000/api/v1/agents')
+    .get(AGENTS_LIST_ENDPOINT)
     .then(({ data }) => {
       let res = data.data.length > 0? data.data: [];
       setAgents(res);
