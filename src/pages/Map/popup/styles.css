@@ -1,0 +1,25 @@
+.metadata {
+    width: 100%;
+    display: table;
+    border-collapse: collapse;
+    font-size: 11px;
+    overflow: auto;
+    border-bottom: 1px solid #ccc;
+    max-height: 189px;
+    border-spacing: 0;
+}
+
+.metadata td {
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.property-key {
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 1.2em;
+}
+
+.property-value {
+    font-style: italic;
+}

@@ -1,0 +1,24 @@
+/* Map styles for react leaflet */
+.map {
+    height: 100vh;
+    padding: 0;
+    margin: 0
+  }
+  
+  .custom .leaflet-popup-content-wrapper {
+    background: #e93434;
+    color: #ffffff;
+  }
+  
+  .custom-popup .leaflet-popup-content-wrapper {
+    border-radius: 0px;
+  }
+  
+  /* React leaflet draw styles */
+  .sr-only {
+    display: none;
+  }
+
+  .MuiButton-textPrimary {
+    color: #1A73E8 !important;
+}
